@@ -1,0 +1,75 @@
+<div class="container-y">
+    <div class="col-md-12 ">
+        <div class="row" style="min-width: 100%!important;border-radius: 0px;">
+            <div class="card text-white bg-cart" style="border-color: transparent; background-color: #2b2b2b;" >
+                <div class="card-header" style="background-color: #643e94;border-radius: 0px;">
+                    Bet Slip ({{count}})
+                          <div class="col-md-5">
+                        <div *ngIf="count >= 1">
+                            <button (click)="clearBetSlip()" style="background-color: transparent; border: none; font-size: 16px;"><span style="font-size: 13px;">Clear</span><i class="fa fa-times"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body  cardn"style="min-width: 100% !important;">
+                    <div *ngIf="count == 0">
+                        <p class="card-text" style="font-size: 13px; margin-top: -10px; "><strong>To place a bet:</strong> Choose the sport, tournament and event that you would like to bet on. Then select a market by clicking the odds that you would like to bet on</p>
+                    </div>
+                    <!-- <p class="card-text" style="font-size: 13px; margin-top: -10px; "><strong>To place a bet:</strong> Choose the sport, tournament and event that you would like to bet on. Then select a market by clicking the odds that you would like to bet on</p> -->
+                    <p style="font-size: small; margin-top: -10px;">{{message}}</p>
+                    <div *ngFor="let bet of iterm">
+                        <div class="media">
+                            <div class="mw-100 media-body border border-warning " style="margin-top: -25px; margin-bottom: 20px;">
+                                <div class="row">
+                                    <div class="col-md-9">
+                                        <p style="font-size: 14px; margin-left: -7px;">
+                                            {{bet.Id}}. {{bet.punterBetSelection}} 
+                                            <!-- {{bet.Id}} -->
+                                        </p>
+                                    </div>
+                                      <div class="col-md-3">
+                                        <button (click)="remove(bet)" style="background-color: transparent; color: #d9534f; border: none; font-size: 17px;">
+                                            <i class="fa fa-times"></i>
+                                        </button>
+                                      </div>
+                                </div>
+                                
+                                
+                                <p style="font-size: small;">
+                                    {{bet.punterBetSelection}}
+                                    <br>
+                                    {{bet.selectionodds}}
+                                    <br>
+                                    {{bet.event}}
+                                    <br>
+                                    {{bet.TypeofEvent}} 
+                                </p>
+                                
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+           
+    
+            </div>
+    
+            <div class="card bg-dark text-white mt-2"  style="min-width: 100%!important;">
+              <img  style="min-width: 100%!important;" class="card-img" src="https://hollywoodmedia.hollywoodbets.net/images/cms/new-website/images/go-back-to-old-website.gif" alt="">
+              <div class="card-img-overlay">
+              </div>
+            </div>
+    
+            <div class="mt-1" >
+                <button type="button" class="btn btn-primary betButton mt-1" style="min-width:  100%!important;">Upload FICA</button>
+                <button type="button" class="btn btn-primary betButton mt-1" style="min-width:  100%!important;">Upload FICA</button>
+                <button type="button" class="btn btn-primary betButton mt-1" style="min-width:  100%!important;">Upload FICA</button>
+                <button type="button" class="btn btn-primary betButton mt-1" style="min-width:  100%!important;">Upload FICA</button>
+                <button type="button" class="btn btn-primary betButton mt-1" style="min-width:  100%!important;">Upload FICA</button>
+                <button type="button" class="btn btn-primary betButton mt-1" style="min-width:  100%!important;">Upload FICA</button>
+                <button type="button" class="btn btn-primary betButton mt-1" style="min-width:  100%!important;">Upload FICA</button>
+            </div>
+           
+        </div>
+    </div>
+</div>
+  

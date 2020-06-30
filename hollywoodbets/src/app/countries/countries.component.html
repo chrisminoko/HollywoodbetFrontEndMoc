@@ -1,0 +1,30 @@
+
+
+<table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Countries</th>
+        <th scope="col">ID</th>
+        <th scope="col">Flag</th>
+     
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let country of countries" >
+   
+        <td> <a routerLink="/tournaments/{{sportId}}/{{country.countryid}}"  class="list-group-item list-group-item-action active" (click)="selectedCountry(country.countryid)" style="background-color: #1e1e1e !important;">
+            {{country.name}}
+          </a>
+        </td>
+        <td>
+            <p style="color: wheat !important;">{{country.countryid}}</p>
+        </td>
+        <td> 
+          <img src="https://www.countryflags.io/{{country.flagurl}}/flat/24.png" class="list-group-item"  alt="">
+        </td>
+      </tr>
+
+    </tbody>
+  </table>
+  
+ 

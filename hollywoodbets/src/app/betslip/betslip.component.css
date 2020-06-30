@@ -1,0 +1,17 @@
+.betButton{
+    border-radius: 0px!important;
+    background-color: #643e94!important;
+    border-color:#643e94!important ;
+}
+.btn-primary:hover{
+    background-color: black!important ;
+    outline-color: #643e94!important;
+    
+}
+.bg-cart{
+    max-height: 300px;
+    overflow-x: auto;
+}
+.cardborder{
+    border-top-color: yellow !important;
+}

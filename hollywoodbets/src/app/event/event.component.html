@@ -1,0 +1,37 @@
+
+<div class="col-md-12">
+    <div *ngFor="let bettype of bettypes" >
+    </div>
+    
+    <div class="pull-right">
+  
+        <div  class="dropdown">
+          
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                BET TYPES
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <div *ngFor="let bettype of bettypes" >
+                    <a class="dropdown-item" href="#">{{bettype.bettype}}</a>
+                </div>
+        
+             
+              </div>
+          </div>
+          </div>
+ 
+    <div *ngFor="let evnts of event">
+        <div class="card mt-1 text-white" style="min-width: 100% !important; background-color: #1e1e1e !important;">
+            <div class="card-header">
+                {{evnts.eventDate | date:"EEE, MMM,d,y"}}
+           
+           
+            </div>
+
+            <div class="card-body">
+                <h5 class="card-title">{{evnts.eventName}}</h5>
+            </div>
+        </div>
+    </div>
+</div>
+

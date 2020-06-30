@@ -1,0 +1,90 @@
+<div class="contianer container-title">
+    <div class="row">
+   
+        <div class="col-md-12">
+
+          <div class="pull-right">
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Full Mathch
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </div>
+          
+              </div>
+           
+        </div>
+    
+    </div>
+</div>
+
+<div class="container mt-2 container-groupby">
+  <div class="row">
+    <div class="col-md-12 ">
+      <div class="pull-left">
+        <p class= "Group"> Group By :
+          <button type="button" class="btn btn-sm btn-primary mr-2">Time</button>
+          <button type="button" class="btn btn-sm btn-primary">Time</button>
+       </p>
+      </div>
+  
+    </div>
+  </div>
+</div  >
+
+<div class="container-fluid mt-2 container-b">
+ <div class="row" >
+  <div class="col-md-6 mt-3">
+    <div *ngFor="let fix of Fixtures">
+      <table style="min-width: 100%;">
+        <tr>
+          <div class="heading" style="background-color: #333333; margin-left: -13px !important;  margin-right: -60px !important;">
+          <td style="color: #fff; padding-right: 12px;">
+            {{fix.Time}} 
+            <img class="flag-image" src="{{fix.CountryURL}}" style="width: 15px;height: 15px; margin-left: 7px; margin-right: 7px;">
+            {{fix.LeaguName}}
+          </td>
+        </div>
+        </tr>
+        <tr>
+          <div class="btn-group gradient-buttons" style="border-radius: 0px;" role="group" aria-label="Basic example" style="min-width: 100%;margin-left: -13px !important;">
+            <button type="button"(click)="addEventToSlip(Fixtures,fix.HomeTeam,fix.HomePrice)" class="btn btn-secondary home">
+              <span class="name">
+                {{fix.HomeTeam}}
+              </span> 
+              <span class="price">
+                {{fix.HomePrice}}
+              </span>
+            </button>
+            <button type="button" (click)="addEventToSlip(Fixtures,'Draw',fix.Draw)" class="btn btn-secondary draw">
+              <span class="name">
+                {{fix.Draw}}
+              </span> 
+              <span class="price">
+                {{fix.DrawPrice}}
+              </span>
+            </button>
+            <button type="button" (click)="addEventToSlip(Fixtures,fix.Away_Team,fix.AwayPrice)" class="btn btn-secondary away">
+              <span class="name">
+                {{fix.Away_Team}}
+              </span>
+              <span class="price">
+                {{fix.DrawPrice}}
+              </span>
+            </button>
+        </div>
+        </tr>
+      </table>
+      
+    </div>
+  </div>
+ </div>
+  <div class="col-md-6">
+
+  </div>
+    
+</div>

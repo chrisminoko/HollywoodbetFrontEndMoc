@@ -1,0 +1,26 @@
+
+
+<table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Tournament</th>
+  
+     
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let Tournament of tournament" >
+   
+        <td > 
+          <a  routerLink="/event/{{Tournament.tournamentId}}">
+            <p >{{Tournament.name}}</p>
+          </a>
+           
+        </td>
+ 
+      </tr>
+
+    </tbody>
+  </table>
+  
+ 
